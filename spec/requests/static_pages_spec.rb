@@ -7,8 +7,6 @@ describe "Static pages" do
     visit root_path
     click_link "Get an invite"
     #page.should
-    click_link "Fidbacks"
-    #page.should  
   end
   
   shared_examples_for "all static pages" do

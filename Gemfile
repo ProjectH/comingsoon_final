@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.8'
 gem 'bootstrap-sass', '2.0.0'
 
 # Bundle edge Rails instead:
@@ -12,6 +12,7 @@ group :development, :test do
 	gem 'guard-rspec', '0.5.5'
 	gem 'guard-spork', '0.3.2'
 	gem 'spork', '0.9.0'
+	gem 'jquery-rails', '2.0.0'
 end
 
 
@@ -27,7 +28,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails', '2.0.0'
+
 
 group :test do
 	gem 'rspec-rails', '2.10.0'

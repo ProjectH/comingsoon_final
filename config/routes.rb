@@ -4,6 +4,8 @@ SampleApp::Application.routes.draw do
   root to: 'static_pages#home'
   match '/signup', to: 'users#new'
   match '/blog', to: 'static_pages#blog'
+  match '/fr', to: 'static_pages#fr'
+  match '/en', to: 'static_pages#en'
  
   
 

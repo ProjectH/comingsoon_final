@@ -5,16 +5,9 @@ describe "Static pages" do
   
   it "should have the right links on the layout" do
     visit root_path
-    click_link "About"
-    page.should have_selector 'title', text: full_title('About')
-    click_link "Help"
+    click_link "Get an invite"
     #page.should
-    click_link "Contact"
-    #page.should
-    click_link "Home"
-    click_link "Sign up now!"
-    #page.should
-    click_link "Surfing app"
+    click_link "Fidbacks"
     #page.should  
   end
   
@@ -25,30 +18,17 @@ describe "Static pages" do
   
   describe "Home Page" do
     before{visit root_path}    
-    let(:heading) {'Sample App'}
+    let(:heading) {'Fidbacks'}
     let(:page_title) {''}
     it_should_behave_like "all static pages"
     it { should_not have_selector('title', :text=>"| Home")}
   end
   
-  describe "Help Page" do
-    before{visit help_path}
-    let(:heading) {'Help'}
-    let(:page_title) {'Help'}
+  describe "Blog Page" do
+    before{visit blog_path}
+    let(:heading) {'Blog'}
+    let(:page_title) {'Blog'}
     it_should_behave_like "all static pages"
   end
-
-  describe "About" do
-    before{visit about_path}
-    let(:heading) {'About'}
-    let(:page_title) {'About'}
-    it_should_behave_like "all static pages"
-  end
- 
-  describe "Contact" do
-    before{visit contact_path}
-    let(:heading) {'Contact us'}
-    let(:page_title) {'Contact'}
-    it_should_behave_like "all static pages"
-  end 
 end
+ 

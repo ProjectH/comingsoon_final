@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe "Static pages" do
+ describe "Static pages" do
   subject{page}
   
   it "should have the right links on the layout" do
     visit root_path
-    click_link "Get an invite"
+    #click_link "Get an invite"
     #page.should
   end
   

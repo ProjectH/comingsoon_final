@@ -6,10 +6,11 @@ class StaticPagesController < ApplicationController
   def blog
   end
   
-  def FR
+  def fr
   end
   
-  def EN
+  def en
   end
   
+    
 end

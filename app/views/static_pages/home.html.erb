@@ -14,10 +14,24 @@
                     <%= link_to "Get an invite", signup_path, class: "btn btn-warning" %>
 
                 </form>
+     
       </div>
-   
 
             
  <br></br>
  <div/>
 
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+
+     
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+     
+    
+      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

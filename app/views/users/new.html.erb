@@ -1,3 +1,55 @@
-<% provide(:title, 'Sign Up')%>
-<h1>Sign up</h1>
-<p>Get your wetsuit ready, you are almost there</p>
+<%if current_page?(root_url) or current_page?('/en')%>
+
+<div class= "container">
+	<div class="center">
+	<%= link_to image_tag("logo_fidbacks.jpg", alt: "Logo"), 'http://www.fidbacks.com' %>	
+	</div>
+	<div class="center hero-unit">
+  	<h1>Fidbacks</h1>
+
+  	<h2>
+   	 Leverage your honnesty with an awesome profile page!
+  	</h2>
+  
+		<div class="row">
+			<div class="span7 offset2">
+			<%= form_for(@user) do |f| %>
+			<%= render 'shared/error_messages'%>
+			<%= f.text_field :email , :placeholder =>"Your email adress"%>
+
+
+			<%= f.submit "Get an invite", class: "btn-warning"%>
+
+			</div>
+		</div>
+	</div>
+</div>
+<% end %>
+<%else%>
+
+<div class= "container">
+	<div class="center">
+	<%= link_to image_tag("logo_fidbacks.jpg", alt: "Logo"), 'http://www.fidbacks.com' %>	
+	</div>
+	<div class="center hero-unit">
+  	<h1>Fidbacks</h1>
+
+  	<h2>
+   	 Démontrez votre honneteté en vous créant un super profil!
+  	</h2>
+  
+		<div class="row">
+			<div class="span7 offset2">
+			<%= form_for(@user) do |f| %>
+			<%= render 'shared/error_messages'%>
+			<%= f.text_field :email , :placeholder =>"Adresse email"%>
+
+
+			<%= f.submit "Je veux participer", class: "btn-warning"%>
+
+			</div>
+		</div>
+	</div>
+</div>
+<% end %>
+<% end %>

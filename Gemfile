@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
-gem 'bootstrap-sass', '2.0.0'
+gem 'rails', '3.2.3'
+gem 'bootstrap-sass', '2.0.2'
 gem 'jquery-rails', '2.0.2'
 
 # Bundle edge Rails instead:
@@ -13,6 +13,7 @@ group :development, :test do
 	gem 'guard-rspec', '0.5.5'
 	gem 'guard-spork', '0.3.2'
 	gem 'spork', '0.9.0'
+	gem 'annotate', '2.5.0'
 end
 
 

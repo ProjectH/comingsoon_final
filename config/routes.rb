@@ -1,4 +1,4 @@
-SampleApp::Application.routes.draw do
+Comingsoon::Application.routes.draw do
   resources :users
   
   root to: 'users#new'

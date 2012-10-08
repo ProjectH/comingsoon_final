@@ -11,9 +11,9 @@ class UsersController < ApplicationController
       #render new
       redirect_to root_path
     else
-      #render new
-      redirect_to root_path
-      flash[:error] = "Email is invalid"
+      render 'new'
+      #redirect_to root_path
+      #flash[:error] = "Email is invalid"
     end
     end
 end

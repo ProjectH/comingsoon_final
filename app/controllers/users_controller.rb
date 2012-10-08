@@ -7,12 +7,10 @@ class UsersController < ApplicationController
    def create
     @user = User.new(params[:user])
     if @user.save
-      #UserMailer.deliver_bienvenue(@user)
-      UserMailer.registration_confirmation(@user).deliver
+      UserMailer.comingsoon_registration(@user).deliver
 
       flash[:success] = "Check your mail and welcome on board !"
       #render new
-  
       redirect_to root_path
     else
       render 'new'

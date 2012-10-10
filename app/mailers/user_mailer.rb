@@ -2,9 +2,10 @@ class UserMailer < ActionMailer::Base
 
   default :from => "support@fidbacks.com"
   
-  def registration_confirmation(user)
-   @user = user
-  mail(:to => user.email, :subject => "Fidbacks | Invitation to the beta test")
+  def comingsoon_registration(user)
+   #@user = user
+   #attention bien comprendre si on a dejà écrit dans la database
+   mail(:to => user.email, :subject => "Fidbacks | Invitation to the beta test")
  end 
   
 end

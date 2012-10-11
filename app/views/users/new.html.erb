@@ -15,7 +15,7 @@
 			<div class="span7 offset2">
 			<%= form_for(@user) do |f| %>
 			<%= render 'shared/error_messages'%>
-			<%= f.text_field :email , :placeholder =>"Your email address"%>
+			<%= f.text_field :contact , :placeholder =>"Your email address"%>
 
 
 			<%= f.submit "Get an invite", class: "btn-warning"%>
@@ -42,7 +42,7 @@
 			<div class="span7 offset2">
 			<%= form_for(@user) do |f| %>
 			<%= render 'shared/error_messages'%>
-			<%= f.text_field :email , :placeholder =>"Adresse email"%>
+			<%= f.text_field :contact , :placeholder =>"Adresse email"%>
 
 
 			<%= f.submit "Je veux participer", class: "btn-warning"%>

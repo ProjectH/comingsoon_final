@@ -5,7 +5,7 @@ class UserMailer < ActionMailer::Base
   def comingsoon_registration(user)
    #@user = user
    #attention bien comprendre si on a dejà écrit dans la database
-   mail(:to => user.email, :subject => "Fidbacks | Invitation to the beta test")
+   mail(:to => user.contact, :subject => "Fidbacks | Invitation to the beta test")
  end 
   
 end

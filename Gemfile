@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
-gem 'bootstrap-sass', '2.0.2'
+gem 'bootstrap-sass', '~> 2.1.0.1'
 gem 'jquery-rails', '2.0.2'
 gem "mail", "2.4.4"
 gem 'thin'

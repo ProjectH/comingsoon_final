@@ -2,11 +2,11 @@ Comingsoon::Application.routes.draw do
   resources :users
   
   root to: 'users#new'
-  match '/fr', to: 'users#new'
-  match '/en', to: 'users#new'
+ # match '/fr', to: 'users#new'
+ # match '/en', to: 'users#new'
  
 
-  match '/blog', to: 'static_pages#blog'
+  #match '/blog', to: 'static_pages#blog'
   #match '/fr', to: 'static_pages#fr'
   #match '/en', to: 'static_pages#en'
 

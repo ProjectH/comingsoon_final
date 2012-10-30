@@ -1,86 +1,24 @@
-<%if current_page?(root_url) or current_page?('/en')%>
-
 <div class= "container">
 	<div class="gradient">
             <div class="row">
             	<div class="span6 offset3">
                     <div class="content">
-                    	<br><br><br>
+                    	<br><br>
                     	<h1>Fidbacks</h1>
-                    	<h3 class="center" >Let's build trust together</h3><br>
+                    	<h2 class="center" >Let's build trust together</h2>
                     	<p class="center">Sign-up for the beta release !</p>
 	                    	<div class="center">
 								<%= form_for(@user) do |f| %>
 								<%= render 'shared/error_messages'%>
 								<%= f.text_field :contact , :placeholder =>"Your email address", :class=>"input-medium search-query"%>
 								<%= f.submit "Send", class: "btn btn-info"%>
-								
+								<%end%>
 							</div>
-					</div>
-						
-					
 					</div>
 				</div>
 			</div>
-		
-	</div>
-<% end %>
-
-
-<!--
-		
-	</div>
-	<div class="center hero-unit">
-  	<h1>Fidbacks</h1>
-
-  	<h2>
-   	 Leverage your honnesty with an awesome profile page!<br>
-   	 
-   	 
-  	</h2>
-  
-		<div class="row">
-			<div class="span7 offset2">
-			<%= form_for(@user) do |f| %>
-			<%= render 'shared/error_messages'%>
-			<%= f.text_field :contact , :placeholder =>"Your email address"%>
-
-
-			<%= f.submit "Get an invite", class: "btn-warning"%>
-
-			</div>
-		</div>
-	</div>
+	</div>		
 </div>
-<% end %>
--->
-
-<%else%>
-
-<div class= "container">
-	<div class="gradient">
-            <div class="row">
-            	<div class="span6 offset3">
-                    <div class="content">
-                    	<br><br><br>
-                    	<h1>Fidbacks</h1>
-                    	<h3 class="center" >Démontrez votre honnêteté </h3><br>
-                    	<p class="center">Inscrivez vous à la version beta privée!</p>
-	                    	<div class="center">
-								<%= form_for(@user) do |f| %>
-								<%= render 'shared/error_messages'%>
-								<%= f.text_field :contact , :placeholder =>"Votre adresse email", :class=>"input-medium search-query"%>
-								<%= f.submit "S'inscire", class: "btn btn-info"%>
 								
-							</div>
-					</div>
-						
-					
-					</div>
-				</div>
-			</div>
-		
-	</div>
-<% end %>
-<%end%>
+
 

@@ -11,14 +11,14 @@
 require 'spec_helper'
 
 describe User do
-  before { @user = User.new(email: "user@example.com") }
+  before { @user = User.new(contact: "user@example.com") }
 
   subject {@user}
 
-  it { should respond_to(:email) }
+  it { should respond_to(:contact) }
   
   describe "when email is not present" do
-    before{@user.email= ""}
+    before{@user.contact= ""}
       it {should_not be_valid}
   end
   
@@ -27,7 +27,7 @@ describe User do
       addresses = %w[user@foo,com user_at_foo.org example.user@foo.
                      foo@bar_baz.com foo@bar+baz.com]
       addresses.each do |invalid_address|
-        @user.email = invalid_address
+        @user.contact = invalid_address
         @user.should_not be_valid
       end      
     end
@@ -37,20 +37,20 @@ describe User do
     it "should be valid" do
       addresses = %w[user@foo.COM A_US-ER@f.b.org frst.lst@foo.jp a+b@baz.cn]
       addresses.each do |valid_address|
-        @user.email = valid_address
+        @user.contact = valid_address
         @user.should be_valid
       end      
     end
   end
   
-   describe "when email address is already taken" do
-    before do
-      user_with_same_email = @user.dup
-      user_with_same_email.email = @user.email.upcase
-      user_with_same_email.save
-    end
+#    describe "when email address is already taken" do
+#     before do
+#       user_with_same_contact = @user.dup
+#       user_with_same_email.email = @user.email.upcase
+#       user_with_same_email.save
+#     end
 
-    it { should_not be_valid }
-  end
+#     it { should_not be_valid }
+#   end
 
-end
+ end

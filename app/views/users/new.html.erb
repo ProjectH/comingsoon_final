@@ -6,14 +6,17 @@
                     	<br><br><br><br>
                     	<h1>Fidbacks</h1>
                     	<h2 class="center" >Let's build trust together</h2>
-                    	<p class="center">Sign-up for the beta release !</p>
+                    	<p class="center"> Stay tuned, we will keep you posted !</p>
 	                    	<div class="center">
 								<%= form_for(@user) do |f| %>
 								<%= render 'shared/error_messages'%>
 								<%= f.text_field :contact , :placeholder =>"Your email address", :class=>"input-medium search-query"%>
 								<%= f.submit "Send", class: "btn btn-info"%>
 								<%end%>
-								<br><br><br><br><br><br><br><br><br><br>
+								<% flash.each do |key, value| %>
+								<div class="alert alert-<%=key%>"><%= value%></div>
+								<% end%>
+								<br><br><br><br><br><br><br>
 							</div>
 					</div>
 				</div>

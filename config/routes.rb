@@ -1,8 +1,6 @@
 Comingsoon::Application.routes.draw do
   resources :users
   
-  
-  
   root to: 'users#new'
  
  # match '/fr', to: 'users#new'

@@ -5,7 +5,8 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'mail'
 gem 'thin'
-gem 'heroku'
+
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

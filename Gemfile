@@ -1,44 +1,42 @@
 source 'https://rubygems.org'
 
-gem 'rails'
-gem 'bootstrap-sass'
-gem 'jquery-rails'
-gem 'mail'
+gem 'rails', '3.2.3'
+gem 'bootstrap-sass', '~> 2.1.0.1'
+gem 'jquery-rails', '2.0.2'
+gem 'mail', "2.4.4"
 gem 'thin'
+gem 'pg'
 
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-	gem 'sqlite3'
-	gem 'rspec-rails'
-	gem 'guard-rspec'
-	gem 'guard-spork'
-	gem 'spork'
-	gem 'annotate'
+	gem 'sqlite3', '1.3.5'
+	gem 'rspec-rails', '2.11.0'
+	gem 'guard-rspec', '0.5.5'
+	gem 'guard-spork', '0.3.2'
+	gem 'spork', '0.9.2'
+	gem 'annotate', '2.5.0'
 end
 
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platform => :ruby
 
-  gem 'uglifier'
+  gem 'uglifier', '>= 1.0.3'
 end
 
 
 
 group :test do
-	gem 'rspec-rails'
-	gem 'capybara'
-	gem 'rb-fsevent', :require => false
-	gem 'growl'
+	gem 'rspec-rails', '2.11.0'
+	gem 'capybara', '1.1.2'
+	gem 'rb-fsevent', '0.4.3.1', :require => false
+	gem 'growl', '1.0.3'
 end
 
 group :production do
